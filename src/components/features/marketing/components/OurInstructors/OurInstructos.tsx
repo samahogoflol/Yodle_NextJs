@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { StarIcon } from "../../ui/icons/StarIcon";
-import BigSnow from "../../ui/icons/BigSnow";
+import { StarIcon } from "@/src/components/ui/icons/StarIcon";
+import BigSnow from "@/src/components/ui/icons/BigSnow";
 import { useWindowWidth } from "@/src/lib/hooks/useWindowWith";
 import { INSTRUCTORS_MOCK_DATA } from "@/src/mock/instructorList";
 

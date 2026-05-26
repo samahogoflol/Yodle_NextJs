@@ -10,9 +10,14 @@ return (
             </Link>
         </div>
         <div className="md:hidden">
-            <a href="tel:+4408762122213" className="block mb-5 hover:text-[#2E78E5]">
-                +1 916 690 1778
-            </a>
+            <ul className="flex flex-col gap-2">
+                <li>
+                    <a href="tel:+4408762122213" className="block  hover:text-[#2E78E5]"> +1 916 690 1778</a>
+                </li>
+                <li className="mb-5">
+                    <a href="mailto:yodle.info@gmail.com &body=Your text" className="hover:text-[#2E78E5] cursor-pointer">yodle.info@gmail.com</a>   
+                </li>
+            </ul>
         </div>  
         <div className="md:mt-30">
             <nav>
@@ -59,9 +64,12 @@ return (
         </div>
         <div className="hidden md:block mt-30">
             <nav>
-                <ul>
-                    <li className="mb-[29px]">
+                <ul className="flex flex-col gap-2">
+                    <li>
                         <a href="tel:+4408762122213" className="hover:text-[#2E78E5] cursor-pointer">+1 916 690 1778 </a>   
+                    </li>
+                     <li className="mb-[29px]">
+                        <a href="mailto:yodle.info@gmail.com &body=Your text" className="hover:text-[#2E78E5] cursor-pointer">yodle.info@gmail.com</a>   
                     </li>
                 </ul>
             </nav>

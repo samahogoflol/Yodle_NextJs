@@ -1,8 +1,8 @@
-import heroImage from "../../../../public/images/hero-img.png"
-import heroImageMobile from "../../../../public/images/HeroImgMobile.png"
-import BigSnow from "../../ui/icons/BigSnow"
-import { SearchInstructors } from "./SearchInstructors"
-import OurInstructors from "./OurInstructos"
+import heroImage from "../../../../../../public/images/hero-img.png"
+import heroImageMobile from "../../../../../../public/images/HeroImgMobile.png"
+import BigSnow from "@/src/components/ui/icons/BigSnow"
+import { SearchInstructors } from "../SearchInstructors/SearchInstructors"
+import OurInstructors from "../OurInstructors/OurInstructos"
 import Image from "next/image"
 
 const HeroSection = () => {

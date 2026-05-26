@@ -2,16 +2,16 @@
 
 import { useState, useMemo } from "react"; 
 import { useRouter } from "next/navigation";
-import { searchInstructorSchema } from "./schemas/searchInstructorSchema";
+import { searchInstructorSchema } from "../../schemas/searchInstructorSchema";
 import { RESORTS_BY_STATE } from "@/src/mock/resortList";
-import { useBookingDetails } from "./hooks/useBookingDetails";
+import { useBookingDetails } from "../../hooks/useBookingDetails";
 
-import Checkbox from "../../ui/Checkbox";
-import Location from "../../ui/icons/LocationIcon";
-import DateField from "../../ui/DataField";
-import Dropdown from "../../ui/Dropdown";
-import ButtonSearchInstruktor from "../../ui/ButtonSearchInstructor";
-import { ResortIcon } from "../../ui/icons/ResortIcon";
+import Checkbox from "../../../../ui/Checkbox";
+import Location from "../../../../ui/icons/LocationIcon";
+import DateField from "../../../../ui/DataField";
+import Dropdown from "../../../../ui/Dropdown";
+import ButtonSearchInstruktor from "../../../../ui/ButtonSearchInstructor";
+import { ResortIcon } from "../../../../ui/icons/ResortIcon";
 
 type SportType = 'Skiing' | 'Snowboarding' | 'Guiding' | null;
 
