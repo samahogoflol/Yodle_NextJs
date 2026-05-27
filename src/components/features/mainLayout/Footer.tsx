@@ -50,12 +50,12 @@ return (
             <nav>
                 <ul className="flex flex-col gap-2">
                     <li>
-                        <Link href="/privacyPolicy" className="hover:text-[#2E78E5]">
+                        <Link href="/privacy-policy" className="hover:text-[#2E78E5]">
                             Privacy Policy
                         </Link>
                     </li>
                     <li>
-                        <Link href="/publicOffer" className="hover:text-[#2E78E5] ">
+                        <Link href="/public-offer" className="hover:text-[#2E78E5] ">
                             Public Offer 
                         </Link>
                     </li>

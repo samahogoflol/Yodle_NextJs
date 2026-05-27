@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useState, useEffect, useCallback } from "react";
-import type { InstructorsProps } from "../types/instructors";
+import { InstructorsProps } from "../types/instructor";
 
 export interface BookingDetailsState {
     location: string;

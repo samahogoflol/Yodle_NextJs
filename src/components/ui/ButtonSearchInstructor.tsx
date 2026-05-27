@@ -11,7 +11,7 @@ interface ButtonProps {
     form? : string;
 }
 
-const ButtonSearchInstruktor:React.FC<ButtonProps> = ({onClick, name, className, type = "button", form}) => {
+const ButtonSearchInstructor:React.FC<ButtonProps> = ({onClick, name, className, type = "button", form}) => {
 
     const [changeBtnArrow , setChangeBtnArrow] = useState(false)
 
@@ -32,4 +32,4 @@ const ButtonSearchInstruktor:React.FC<ButtonProps> = ({onClick, name, className,
     )
 }
 
-export default ButtonSearchInstruktor;
+export default ButtonSearchInstructor;

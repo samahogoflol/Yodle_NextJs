@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 type LessonItem = {
     [key: string]: string; 
 }
@@ -8,7 +6,7 @@ export interface InstructorsProps {
     id: number;
     name: string;
     aboutInstructor: string;
-    photoMain: StaticImageData | string;
+    photoMain?: string;
     isWorking?: boolean;
     experience?: number;
     rating: number;

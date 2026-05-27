@@ -24,9 +24,11 @@ export default function RootLayout({
     <html lang="uk" className="scroll-smooth">
       <body className={urbanist.className}>
         <Providers> 
-          <Header/>
+          <header className="absolute top-3.5 md:top-5 left-0 right-0 z-50 ">
+            <Header/>
+          </header>
           
-          <main className="min-h-screen">
+          <main className="h-full">
             {children}
           </main>
 

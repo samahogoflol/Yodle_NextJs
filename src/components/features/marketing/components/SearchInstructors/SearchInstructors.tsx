@@ -10,7 +10,7 @@ import Checkbox from "../../../../ui/Checkbox";
 import Location from "../../../../ui/icons/LocationIcon";
 import DateField from "../../../../ui/DataField";
 import Dropdown from "../../../../ui/Dropdown";
-import ButtonSearchInstruktor from "../../../../ui/ButtonSearchInstructor";
+import ButtonSearchInstructor from "../../../../ui/ButtonSearchInstructor";
 import { ResortIcon } from "../../../../ui/icons/ResortIcon";
 
 type SportType = 'Skiing' | 'Snowboarding' | 'Guiding' | null;
@@ -109,7 +109,7 @@ export const SearchInstructors = () => {
             return; 
         }
         setErrors({});
-        router.push("/findYourInstructor")
+        router.push("/find-your-instructor")
     };
 
 
@@ -189,7 +189,7 @@ export const SearchInstructors = () => {
             </div>
             </div>
             <div className={`flex md:justify-end px-5 md:px-0`}>
-                    <ButtonSearchInstruktor
+                    <ButtonSearchInstructor
                         name={"Search instructor"}
                         onClick={handleSubmit}
                         className={`${errors.state || errors.resort || errors.date ? "mt-0" : "mt-6 md:mt-5"} w-full md:w-2/9` }

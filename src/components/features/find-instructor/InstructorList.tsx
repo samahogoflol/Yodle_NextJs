@@ -1,0 +1,21 @@
+import { InstructorsProps } from "@/src/types/instructor";
+import InstructorCard from "./InstructorCard";
+
+interface InstructorListProps {
+    instructors : InstructorsProps[]
+}
+
+const InstructorList:React.FC<InstructorListProps> = ({instructors}) => {
+    return(
+        <div className="flex flex-col gap-5 pb-7 px-4 md:px-7 bg-[#80AAEF] mt-[-2px] md:overflow-hidden overflow-y-auto h-[500px] md:h-max">
+            {instructors.map((instructor) => (
+                <InstructorCard
+                    key={instructor.id}
+                    instructor={instructor}
+                />
+            ))}
+        </div>
+    )
+}
+
+export default InstructorList;
