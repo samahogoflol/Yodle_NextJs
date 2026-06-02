@@ -6,8 +6,8 @@ const PublicOffer = () => {
         <div className="relative">
             <div className="text-center leading-[130%] pt-25">
                 <h2 className="text-[38px] md:text-[56px] font-medium md:font-semibold leading-[100%]">Public Offer </h2>
-                <div className="absolute top-30 right-2 md:hidden">
                 <p className="pt-5 pb-8 md:py-6.5">Last updated: 12.05.2025.</p>
+                <div className="absolute top-30 right-2 md:hidden">
                     <BigSnow
                         width="50"
                         height="50"
@@ -147,7 +147,7 @@ const PublicOffer = () => {
                         <h2 className="leading-[130%] font-medium md:font-semibold text-[22px] md:text-[26px]">12. Contact Information</h2>
                         <ul className="text-[18px] md:text-[20px]">
                             <li>If you have any questions about these Terms, please contact us at:</li>
-                            <li>Email: [insert email]</li>
+                            <li>Email: yodle.info@gmail.com</li>
                             <li>Address: [insert address]</li>
                         </ul>
                     </article>

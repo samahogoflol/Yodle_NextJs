@@ -1,3 +1,5 @@
+"use client"
+
 import { ArrowRightIcon } from "./icons/ArrowRightIcon";
 import { SnowChangeBtnIcon } from "./icons/SnowChangeButtonIcon";
 import { useState } from "react";

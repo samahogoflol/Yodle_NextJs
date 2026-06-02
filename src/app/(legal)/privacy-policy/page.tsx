@@ -37,9 +37,10 @@ const PrivacyPolicy = () => {
                     </article>
                     <div className="md:hidden absolute right-5 md:left-[7vw] md:top-[50vw]">
                         <BigSnow
-                        width="50"
-                        height="50"
-                        viewBox="0 0 620 570"/>
+                            width="50"
+                            height="50"
+                            viewBox="0 0 620 570"
+                        />
                     </div>
                 </div>
                 <div>
@@ -144,7 +145,7 @@ const PrivacyPolicy = () => {
                         <h2 className="leading-[130%] font-medium md:font-semibold text-[22px] md:text-[26px]">14. Contact Us</h2>
                         <p className="text-[18px] md:text-[20px]">
                             If you have any questions about this Privacy Policy or our data practices, please contact us: <br />
-                            Email: [insert contact email] <br />
+                            Email: yodle.info@gmail.com <br />
                             Address: [insert address or mailing address]
                         </p>
                     </article>

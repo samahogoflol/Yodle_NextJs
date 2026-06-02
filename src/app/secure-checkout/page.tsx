@@ -9,6 +9,7 @@ import { PromocodeButton } from '@/src/components/features/secureCheckout/Promoc
 import ContactInfo from '@/src/components/features/secureCheckout/ContactInfo';
 import Payment from '@/src/components/features/secureCheckout/Payment';
 import SummaryBlock from '@/src/components/features/SummaryBlock';
+import BigSnow from '@/src/components/ui/icons/BigSnow';
 
 const SecureCheckout = () => {
 
@@ -28,7 +29,7 @@ const SecureCheckout = () => {
     const router = useRouter();
 
     const onSubmit = () => {
-        router.push("/bookingConfirmed");
+        router.push("/booking-confirmed");
     };
 
     const onFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,7 +39,7 @@ const SecureCheckout = () => {
     return (
         <FormProvider {...methods}>
             <div className="relative z-10 leading-[130%] mt-26 md:mt-40">
-                <h1 className="text-[38px] md:text-[56px] md:font-semibold text-center leading-[100%]">Secure Checkout</h1>
+                <h1 className="relative z-10 text-[38px] md:text-[56px] md:font-semibold text-center leading-[100%]">Secure Checkout</h1>
                 <form id="checkout-form" onSubmit={onFormSubmit}>
                     <div className="md:grid md:grid-cols-5 px-4 md:px-[189px] gap-7 z-10 pt-[30px] md:pt-[85px] pb-15 md:pb-[184px]">
                         
@@ -67,6 +68,29 @@ const SecureCheckout = () => {
                         </div> 
                     </div>
                 </form>
+
+                <div className='absolute top-[-12vw] left-0 z-0 md:top-[16vw] md:left-[3vw]'>
+                    <BigSnow
+                        width="75"
+                        height="75"
+                        viewBox="0 0 620 570"
+                    />
+                </div>
+                <div className='absolute  bottom-[-20px] md:top-0 md:right-[5vw] '>
+                    <BigSnow
+                        width="80"
+                        height="80"
+                        viewBox="0 0 620 570"
+                    />
+                </div>
+                 <div className='hidden md:block absolute bottom-12 right-0 '>
+                    <BigSnow
+                        width="460"
+                        height="460"
+                        viewBox="0 0 620 570"
+                    />
+                </div>
+
             </div>
         </FormProvider>
     )  

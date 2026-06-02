@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 
 import { BookingDetailsProps } from "@/src/types/bookingDetails";
@@ -10,7 +12,6 @@ import TypeSummeryCard from "./find-instructor/TypeSummaryCard";
 import ParticipantsSummaryCard from "./find-instructor/ParticipantsSummaryCard";
 import InstructorsSummaryBlock from "./find-instructor/InstructorSummaryBlock";
 import TotalPriceSummaryBlock from "./find-instructor/TotalPriceSummaryBlock";
-import { useWindowWidth } from "@/src/lib/hooks/useWindowWith";
 
 interface SummaryBlockProps {
     showLocation: boolean;
@@ -30,16 +31,14 @@ const SummaryBlock:React.FC<SummaryBlockProps> = ({
     showLocation, showDataAndTime, showInstructor, showType, showParticipants, 
     buttonText, totalPriceStyles, linkButtonTo, formId, isSticky, onClick
 }) => {
-
-    const {isDesktop} = useWindowWidth();
     const {bookingDetails} = useBookingDetails();
 
     const finalPrice = bookingDetails.instructor 
     ? calculateBookingPrice(bookingDetails as BookingDetailsProps)
     : 0;
-
-    const renderButton = () => (
-        <div className="w-full mt-5 md:mt-0">
+    
+    const renderButton = (displayClass: string) => (
+        <div className={`w-full mt-5 md:mt-0 ${displayClass}`}>
             {formId ? (
                 <div className="flex justify-center">
                     <ButtonSearchInstructor
@@ -99,9 +98,9 @@ const SummaryBlock:React.FC<SummaryBlockProps> = ({
                         totalPriceStyles={totalPriceStyles}
                     />
                 </div>
-                {isDesktop && renderButton()}
+                {renderButton("hidden md:block")}
             </div>
-            {!isDesktop && renderButton()}
+            {renderButton("block md:hidden")}
         </div>
     );
 }

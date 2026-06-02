@@ -1,9 +1,11 @@
+import Image from "next/image"
 import heroImage from "../../../../../../public/images/hero-img.png"
 import heroImageMobile from "../../../../../../public/images/HeroImgMobile.png"
 import BigSnow from "@/src/components/ui/icons/BigSnow"
+import { HeroSectionHalfSnow } from "@/src/components/ui/icons/HeroSectionHalfSnow"
 import { SearchInstructors } from "../SearchInstructors/SearchInstructors"
 import OurInstructors from "../OurInstructors/OurInstructos"
-import Image from "next/image"
+
 
 const HeroSection = () => {
     return(
@@ -18,16 +20,15 @@ const HeroSection = () => {
                             </p>
                         </div>
                         <div className="hidden md:block absolute top-[11vw] left-0 z-0">
-                            <BigSnow width="60" height="60" viewBox="0 0 630 630" />
+                           <HeroSectionHalfSnow/>
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 relative order-0 md:order-1 md:h-full">
-                        {/* <img className="hidden md:block w-full h-full object-cover z-0" src={heroImage} alt="Main skiing experience"/> */}
-                        {/* <img className="block md:hidden w-full object-cover z-0" src={heroImageMobile} alt="Main skiing experience mobile"/> */}
                         <Image 
                             width={400} 
                             height={400}
                             src={heroImage}
+                            priority
                             alt="Main skiing experience"
                             className="hidden md:block w-full h-full object-cover z-0"
                         />
@@ -35,14 +36,17 @@ const HeroSection = () => {
                             width={400} 
                             height={400}
                             src={heroImageMobile}
+                            priority
                             alt="Main skiing experience"
                             className="block md:hidden w-full object-cover z-0" 
                         />
-                        <div className="absolute top-[62vw] left-[8vw] md:left-[12vw] md:top-[18vw] z-10">
+                        <div className="absolute top-[62vw] left-[8vw] md:left-[11vw] md:top-[18vw] z-10">
                             <BigSnow width="60" height="60" viewBox="0 0 630 630" />
                         </div>
 
-                        <BigSnow width="60" height="60" viewBox="0 0 630 630" />
+                         <div className="hidden md:block absolute right-[7.5vw] top-[37vw] z-10">
+                            <BigSnow width="120" height="120" viewBox="0 0 630 630" />
+                        </div>
 
                     </div>
                 </section>

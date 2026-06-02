@@ -13,9 +13,6 @@ import BigSnow from "@/src/components/ui/icons/BigSnow";
 import TotalPriceSummaryBlock from "@/src/components/features/find-instructor/TotalPriceSummaryBlock";
 import ButtonSearchInstructor from "@/src/components/ui/ButtonSearchInstructor";
 
-import Header from "@/src/components/features/mainLayout/Header";
-import Footer from "@/src/components/features/mainLayout/Footer";
-
 const BookingConfirmed = () => {
 
     const router = useRouter();
@@ -32,13 +29,9 @@ const BookingConfirmed = () => {
     };
 
     return (
-        <div>
-            <div className="md:hidden mt-[26px]">
-                <Header />
-            </div>
-            
-            <div className="flex flex-col py-15 md:py-[90px] relative z-10 p-4">
-                <div className="bg-[#2E78E5] p-4 md:p-7 leading-[130%] z-10 md:w-9/20 md:ml-auto md:mr-auto">
+        <div className="mt-[69px]">
+            <div className=" flex flex-col py-15 md:py-[90px] relative z-10 p-4">
+                <div className="bg-[#2E78E5] rounded p-4 md:p-7 leading-[130%] z-10 md:w-9/20 md:ml-auto md:mr-auto">
                     <section className="flex flex-col gap-5 md:gap-6">
                         <h2 className="text-center text-white text-[22px] md:text-[26px] md:font-semibold leading-[120%]">Booking confirmed!</h2>
                         <span className="text-center text-white  text-[18px] md:text-[20px] mb-5 md:mb-6 leading-[120%]">Confirmation Number: <br/> #SK-2025-4782</span>
@@ -102,10 +95,6 @@ const BookingConfirmed = () => {
                 <div className="block md:hidden absolute bottom-[-15px] left-15">
                     <BigSnow width="34px" height="34px" viewBox="0 0 574 640" />
                 </div>
-            </div>
-            
-            <div className="md:hidden">
-                <Footer />
             </div>
     </div> 
     )

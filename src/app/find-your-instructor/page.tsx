@@ -177,13 +177,10 @@ const FindYourInstructorContent = () => {
                         />
                     </div>
                 </div>
-                <div className="absolute top-[88vw] right-0">
+                <div className="absolute top-[5vw] right-[10vw]">
                     <BigSnow width="64px" height="64px" viewBox="0 0 574 640" />
                 </div>
-                <div className="absolute top-[22vw] right-[7vw] rotate-60">
-                    <BigSnow width="64px" height="64px" viewBox="0 0 574 640" />
-                </div>
-                <div className="absolute top-[10vw] left-[9vw] rotate-60">
+                <div className="absolute top-[3vw] left-[12vw] rotate-60">
                     <BigSnow width="64px" height="64px" viewBox="0 0 574 640" />
                 </div>
             </div>

@@ -1,9 +1,26 @@
+"use client"
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FooterCompanyLogo } from "../../ui/icons/FooterCompanyLogo";
 
 const Footer = () => {
+
+    const pathname = usePathname();
+
+    const hiddenRoutes = [
+        "/secure-checkout",
+        "/booking-confirmed"
+    ];
+
+    const shouldHideFooter = hiddenRoutes.includes(pathname);
+
+    if(shouldHideFooter) {
+        return null;
+    }
+
 return (
-    <div className="pb-15 md:pb-0 text-center md:text-left bg-white flex flex-col md:grid md:grid-cols-4 w-full leading-[130%]" >
+    <footer id="global-footer" className="pb-15 md:pb-0 text-center md:text-left bg-white flex flex-col md:grid md:grid-cols-4 w-full leading-[130%]" >
         <div id="header" className= "flex justify-center md:justify-start mt-15.5 md:mt-[150px] mb-5 md:mb-[150px] md:pl-12 text-[#2E78E5]">
             <Link href="/#header">
                <FooterCompanyLogo/>
@@ -74,7 +91,7 @@ return (
                 </ul>
             </nav>
         </div>     
-    </div>
+    </footer>
     )
 }
 

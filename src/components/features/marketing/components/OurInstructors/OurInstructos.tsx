@@ -10,12 +10,12 @@ const OurInstructors = () => {
             <h2 className="md:hidden text-[38px] font-normal leading-[100%] ">Our featured <br/> instructors</h2>
             <p className="text-[18px] pr-20 md:pr-0 md:w-[567px] md:h-[78pxv] md:text-[20px] mt-8 md:mt-15 leading-[120%] md:leading-[130%]">Every instructor on our platform is fully vetted and covered by comprehensive liability insurance, so you can focus on learning and enjoying the mountain. </p>
            
-           <div className="flex overflow-x-auto md:overflow-x-visible snap-x snap-mandatory md:snap-none gap-4 md:gap-10 pb-8 md:pb-0 no-scrollbar mt-10 mb-12 md:mb-25">
+           <div className="flex overflow-x-auto md:overflow-x-visible snap-x snap-mandatory md:snap-none pr-4 md:pr-0 gap-4 md:gap-10 pb-8 md:pb-0 no-scrollbar mt-10 mb-12 md:mb-25">
                 {INSTRUCTORS_MOCK_DATA.filter((item) => item.mainPageReview).map((instructor) => {
                         return (
                             <div 
                                 key={instructor.id} 
-                                className="group min-w-[80vw] md:min-w-0 md:w-[325px] snap-center md:snap-align-none h-[420px] relative overflow-hidden cursor-pointer"
+                                className="group min-w-[80vw] md:min-w-0 md:w-[325px] snap-center md:snap-align-none h-[420px] relative overflow-hidden cursor-pointer "
                             >
                                 <article className="h-full">
                                     <Image 
@@ -25,7 +25,10 @@ const OurInstructors = () => {
                                             instructor.name === "Mariia Vovchenko"
                                                 ? "h-[346px] object-[50%_40%]" 
                                                 : "object-center"
-                                        }`} 
+                                            } ${instructor.name === "Sem Boul" ? "h-[226px] object-[50%_20%]" 
+                                                : "object-center" }
+                                            ${instructor.name === "Charles Piastri" ? "h-[256px] object-[50%_60%]" 
+                                                : "object-center" }` } 
                                         src={instructor.photoMain} 
                                         alt={`Our Instructor - ${instructor.name}`} 
                                     />
@@ -53,10 +56,10 @@ const OurInstructors = () => {
             </div>
           </div>  
 
-            <div className="absolute top-[23vw] right-[6vw] z-[-1] md:top-[7vw] md:right-[22vw]">
+            <div className="absolute top-[14vw] right-[14vw] z-[-1] md:top-[11vw] md:right-[33vw]">
                 <BigSnow
-                    width="48px"
-                    height="48px"
+                    width="55px"
+                    height="55px"
                     viewBox="0 0 574 640"
                 />
             </div>
