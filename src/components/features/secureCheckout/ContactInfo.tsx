@@ -1,0 +1,150 @@
+import { useEffect } from 'react';
+import { useFormContext } from 'react-hook-form';
+import { useBookingDetails } from '../marketing/hooks/useBookingDetails';
+
+interface ContactInfoFormValues {
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    email: string;
+}
+
+const ContactInfo = () => {
+
+    const { setBookingDetails } = useBookingDetails();
+
+    const {
+        register,
+        formState: { errors },
+        watch
+    } = useFormContext<ContactInfoFormValues>();
+
+    const watchedFirstName = watch('firstName');
+    const watchedLastName = watch('lastName');
+    const watchedPhoneNumber = watch('phoneNumber');
+    const watchedEmail = watch('email');
+
+    useEffect(() => {
+        setBookingDetails(prev => ({
+            ...prev,
+            firstName: watchedFirstName || "",
+            lastName: watchedLastName || "",
+            phoneNumber: watchedPhoneNumber || "",
+            email: watchedEmail || ""
+        }));
+    }, [watchedFirstName, watchedLastName, watchedPhoneNumber, watchedEmail, setBookingDetails]);
+
+    return (
+         <div className="col-span-2 bg-[#80AAEF] rounded p-4 md:p-7">
+            <h2 className="text-[22px] md:text-[26px] md:font-semibold leading-[120%]">Contact Info</h2>
+            
+            <div className='pt-4 md:pt-7 flex flex-col'>
+                <div className='flex flex-col md:grid md:grid-cols-2 gap-7 pb-7 leading-[130%]'>
+                    <div>
+                        <div className='relative'>
+                            <input
+                                id='firstName'
+                                {...register('firstName')} 
+                                className='peer bg-white px-3 py-4 w-full'
+                                placeholder=' '
+                            />
+                            <label 
+                                htmlFor='firstName'
+                                className="absolute left-3 top-2.5 md:text-gray-400 transition-all
+                                peer-placeholder-shown:top-4
+                                peer-placeholder-shown:text-base
+                                peer-focus:top-0
+                                peer-focus:text-sm
+                                peer-focus:opacity-100
+                                peer-not-placeholder-shown:opacity-0
+                                "
+                            >
+                                First Name
+                            </label>
+                        </div>
+                        {errors.firstName && (
+                            <p className='text-red-600 mt-1'>{errors.firstName?.message as string}</p>
+                        )}
+                    </div>
+                    <div>
+                        <div className='relative'>
+                            <input
+                                id='lastName'
+                                {...register('lastName')}
+                                className='peer bg-white px-3 py-4 w-full'
+                                placeholder=' '
+                            />
+                            <label 
+                                htmlFor='lastName'
+                                className="absolute left-3 top-2.5 md:text-gray-400 transition-all
+                                peer-placeholder-shown:top-4
+                                peer-placeholder-shown:text-base
+                                peer-focus:top-0
+                                peer-focus:text-sm
+                                peer-focus:opacity-100
+                                peer-not-placeholder-shown:opacity-0
+                                "
+                            >
+                                Last Name
+                            </label>
+                        </div>
+                        {errors.lastName && (
+                            <p className='text-red-600 mt-1'>{errors.lastName?.message as string}</p>
+                        )}
+                    </div> 
+                </div>
+                
+                <div className=' flex flex-col gap-7'>
+                    <div className='relative'>
+                        <input
+                            id='phoneNumber'
+                            {...register('phoneNumber')} 
+                            className='peer bg-white px-3 py-4 w-full'
+                            placeholder=' '
+                        />
+                        <label 
+                            htmlFor='phoneNumber'
+                            className="absolute left-3 top-2.5 md:text-gray-400 transition-all
+                            peer-placeholder-shown:top-4
+                            peer-placeholder-shown:text-base
+                            peer-focus:top-0
+                            peer-focus:text-sm
+                            peer-focus:opacity-100
+                            peer-not-placeholder-shown:opacity-0"
+                        >
+                            Phone Number
+                        </label>
+                        {errors.phoneNumber && (
+                            <p className='text-red-600 mt-1'>{errors.phoneNumber?.message as string}</p>
+                        )}
+                    </div>
+                    <div className='relative'>
+                        <input
+                            id='email' 
+                            {...register('email')} 
+                            className='peer bg-white px-3 py-4 w-full'
+                            placeholder=' '
+                        />
+                        <label 
+                            htmlFor='email'
+                            className="absolute left-3 top-2.5 md:text-gray-400 transition-all
+                            peer-placeholder-shown:top-4
+                            peer-placeholder-shown:text-base
+                            peer-focus:top-0
+                            peer-focus:text-sm
+                            peer-focus:opacity-100
+                            peer-not-placeholder-shown:opacity-0"
+                        >
+                            Email
+                        </label>
+                        {errors.email && (
+                            <p className='text-red-600 mt-1'>{errors.email?.message as string}</p>
+                        )}
+                    </div> 
+                </div>
+            </div>       
+        </div>
+    )
+}
+
+export default ContactInfo;

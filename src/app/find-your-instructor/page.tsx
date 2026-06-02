@@ -171,7 +171,7 @@ const FindYourInstructorContent = () => {
                             showType={true}
                             buttonText="Proceed to Checkout"
                             totalPriceStyles="flex text-[26px] font-semibold justify-between w-full px-4"
-                            linkButtonTo="/secureCheckout"
+                            linkButtonTo="/secure-checkout"
                             onClick={handleDesktopNext}
                             isSticky={true}
                         />
@@ -248,7 +248,7 @@ const FindYourInstructorContent = () => {
                             showType={true}
                             buttonText="Proceed to Checkout"
                             totalPriceStyles="flex text-[22px] md:text-[26px] font-medium md:font-semibold justify-between w-full md:p-4 opacity-70 md:opacity-100"
-                            linkButtonTo="/secureCheckout"
+                            linkButtonTo="/secure-checkout"
                         />
                     </div>
                 )}
