@@ -15,7 +15,7 @@ import carlosGellar from "../../public/instructorsPhoto/Carlos Gellar.jpg"
 import fernandoStroll from "../../public/instructorsPhoto/Fernando Stroll.jpg"
 import aleksandrLawson from "../../public/instructorsPhoto/Alexander Lawson.jpg"
 
-import { InstructorsProps } from "../types/instructors"
+import { InstructorsProps } from "../types/instructor"
 
 export const INSTRUCTORS_MOCK_DATA: InstructorsProps[] = [
     {

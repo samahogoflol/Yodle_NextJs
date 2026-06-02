@@ -1,4 +1,4 @@
-import type { InstructorsProps } from './instructors'; 
+import { InstructorsProps } from "./instructor";
 
 export interface BookingDetailsProps {
     instructor : InstructorsProps;

@@ -29,8 +29,8 @@ const OurInstructors = () => {
                                                 : "object-center" }
                                             ${instructor.name === "Charles Piastri" ? "h-[256px] object-[50%_60%]" 
                                                 : "object-center" }` } 
-                                        src={instructor.photoMain} 
-                                        alt={`Our Instructor - ${instructor.name}`} 
+                                        src={instructor.photoMain || "/default-avatar.png"} 
+                                        alt={`Our Instructor - ${instructor.name || "Unknown"}`} 
                                     />
                                     <div className="bg-white text-black p-5 text-[26px] font-semibold">
                                         <h3>{instructor.name}</h3>

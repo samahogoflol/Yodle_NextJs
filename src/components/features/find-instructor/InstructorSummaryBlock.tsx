@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 interface InstructorsSummaryBlockProps {
     instructorId? : number;
-    instructorPhoto? : string;
+    instructorPhoto? : string| StaticImageData;
     instructorName? : string;
     instructorRating?: number;
     instructorExperience? : number;
